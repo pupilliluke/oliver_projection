@@ -1,113 +1,89 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaBaseballBall } from "react-icons/fa";
-import { motion } from "framer-motion";
-import ReactPlayer from "react-player";
+import "./../styles/Landing.css";
 
-export default function Landing() {
+const Landing = () => {
   return (
-    <div className="relative min-h-screen bg-gray-900 text-white overflow-hidden">
-      {/* YouTube Video Background */}
-      <div className="absolute inset-0 w-full h-full">
-        <ReactPlayer
-          url="https://www.youtube.com/embed/B9QNARxOimE?si=OFEpy_lD3EiY5hkS"
-          playing
-          loop
-          muted
-          width="110vw"
-          height="90vh"
-          title="Background video"
-          frameBorder="0"
-          config={{
-            youtube: {
-              playerVars: { 
-                controls: 0, 
-                showinfo: 0, 
-                modestbranding: 1, 
-                rel: 0, 
-                fs: 0 
-              }
-            }
-          }}
-          style={{
-            position: "fixed",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%) scale(1.8)", // Centered & zoomed in
-            zIndex: -1,
-            pointerEvents: "none",
-          }}
-        />
-        {/* Optional overlay to hide the YouTube 'i' button */}
-        <div className="absolute top-0 right-0 w-16 h-16 bg-black"></div>
-      </div>
+    <div>
+      {/* Header Section */}
+      <header className="header">
+        <h1>Flash Stats</h1>
+        <img src="/images/logo.png" alt="Flash Stats Logo" className="logo" />
+        <nav>
+          <a href="#players">Players</a>
+          <a href="#teams">Teams</a>
+          <a href="#stats">Stats</a>
+          <a href="#predictions">Predictions</a>
+          <a href="#contact">Contact</a>
+          <button className="signup-btn">Sign Up</button>
+        </nav>
+      </header>
 
       {/* Hero Section */}
-<section className="relative flex flex-col items-center justify-center pt-32 pb-20 text-center">
-  <motion.h1
-    className="text-8xl font-extrabold mb-6 text-white"
-    initial={{ opacity: 0, y: -20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    Flash Stats
-  </motion.h1>
-  <p className="text-2xl text-gray-300 mb-8">
-    The Ultimate Baseball Analytics Platform
-  </p>
-  <motion.button
-    className="mt-8 btn px-6 py-4 text-lg font-semibold rounded-pill shadow-lg transition transform hover:scale-105"
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    style={{
-      background: "linear-gradient(to right, #f59e0b, #d97706)", // Orange gradient
-      border: "none", 
-      color: "#fff",
-    }}
-  >
-    Get Started Now
-  </motion.button>
-</section>
-
-
-      {/* Features Section */}
-      <section className="relative grid grid-cols-1 md:grid-cols-3 gap-4 px-6 md:px-10 my-10 bg-gray-800 bg-opacity-80 rounded-xl mx-4 md:mx-10 py-8">
-        {["Real-Time Stats", "Player Predictions", "Fantasy Insights"].map((feature, index) => (
-          <div key={index} className="flex flex-col items-center text-center p-4">
-            <FaBaseballBall size={40} className="mb-4 text-blue-400" />
-            <h3 className="text-2xl font-semibold mb-2">{feature}</h3>
-            <p className="text-gray-300">
-              Get cutting-edge insights and analytics to stay ahead in the game.
-            </p>
-          </div>
-        ))}
+      <section className="hero">
+        <h1>Next-Level Baseball Analytics & Predictions</h1>
+        <p>
+          Unlock the power of data with insights from 400K+ players worldwide.
+          Run by people that get it, built for fans and analysts who demand accuracy.
+        </p>
+        <button onClick={() => window.location.href = "#signup"}>Get Your Edge Now</button>
       </section>
 
- {/* Signup Section */}
-<section className="relative flex justify-center my-10">
-  <div className="bg-blue-500 bg-opacity-80 p-8 rounded-xl w-full max-w-lg text-center shadow-xl">
-    <h2 className="text-3xl font-bold mb-2">Sign Up for Exclusive MLB Analytics</h2>
-    <p className="text-lg text-gray-100 mb-4">
-      Join thousands of baseball analysts using Flash Stats.
-    </p>
-    <div className="flex justify-center">
-      <input
-        type="email"
-        placeholder="Enter your email"
-        className="w-64 p-3 rounded-l-lg outline-none text-gray-900"
-      />
-      <button className="px-6 py-3 bg-gray-900 hover:bg-gray-700 rounded-r-lg transition duration-300 text-white">
-        Join Now
-      </button>
-    </div>
-  </div>
-</section>
+      {/* Main Content */}
+      <div className="container">
+        <div className="column">
+          <h2>Top Players</h2>
+          <p>Stay updated on this season's top performers.</p>
+          <ul>
+            <li><strong>Player A</strong>: .320 AVG, 25 HR, 78 RBI</li>
+            <li><strong>Player B</strong>: 2.45 ERA, 150 K</li>
+            <li><strong>Player C</strong>: 40 SB, .410 OBP</li>
+          </ul>
+          <button className="toggle-btn">View More Stats</button>
+        </div>
 
+        <div className="column">
+          <h2>MLB Standings</h2>
+          <p>Check where your team stands. Toggle between seasons.</p>
+          <select id="seasonSelect">
+            <option>2025</option>
+            <option>2024</option>
+            <option>2023</option>
+          </select>
+          <ul>
+            <li><strong>Team X</strong>: 65-40 (.620)</li>
+            <li><strong>Team Y</strong>: 60-45 (.571)</li>
+            <li><strong>Team Z</strong>: 58-48 (.547)</li>
+          </ul>
+        </div>
 
-      {/* Footer */}
-      <footer className="relative text-center text-gray-400 py-4">
-        <p>&copy; 2025 Flash Stats. All Rights Reserved.</p>
+        <div className="column">
+          <h2>Unlock Advanced Stats</h2>
+          <p>Access AI-driven insights & exclusive data to stay ahead of the game.</p>
+          <ul>
+            <li>Predictive performance models</li>
+            <li>Historical trend analysis</li>
+            <li>Custom player comparisons</li>
+          </ul>
+          <button className="toggle-btn" onClick={() => window.location.href = "#signup"}>Start Your Free Trial</button>
+        </div>
+      </div>
+
+      <div className="full-width-section">
+        <h2>MLB Scores, Standings, News & Analytics</h2>
+        <p>Stay updated with the latest MLB scores, team standings, breaking news, and in-depth analytics.</p>
+      </div>
+
+      <div className="full-width-section">
+        <h2>Join Fantasy Baseball</h2>
+        <p>Sign up to participate in our fantasy baseball league and test your skills against others.</p>
+        <button>Sign Up Now</button>
+      </div>
+
+      <footer className="footer">
+        <p>&copy; 2025 Flash Stats. All rights reserved.</p>
       </footer>
     </div>
   );
-}
+};
+
+export default Landing;
