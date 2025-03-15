@@ -1,0 +1,351 @@
+/* Import Classic Newspaper Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+/* General Newspaper Styling */
+body {
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
+    background-color: #fffff8; /* Aged newspaper look */
+    color: #222; /* Darker black for print effect */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+nav {
+    display: flex;
+    gap: 20px; /* Adds spacing between links */
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center;
+    background-color: #f5f5f1;
+    padding: 15px 20px;
+    border-bottom: 3px solid #444;
+}
+
+/* carosel? */
+.hero {
+    background-color: #acacac;
+    margin: 0;            /* Remove default margin */
+    padding: 0;           /* Remove padding if needed */
+    width: 100%;          /* Ensure it takes full width of the parent */
+    height: 100vh;        /* Optional: makes the hero section cover full viewport height */
+    position: relative;   /* Optional: helps prevent positioning issues */
+    left: 0;              /* Ensure it starts from the left edge */
+    right: 0;             /* Ensure it stretches to the right edge */
+    box-sizing: border-box; /* Ensure padding/border doesn't affect width calculation */
+}
+
+
+/*
+.hero img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+
+.hero img.active {
+    opacity: 1;
+} */
+
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    max-width: 80%;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+/* Stats Table Styling */
+.stats-table {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+    background: #fff;
+    border: 2px solid #aaa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stats-table thead {
+    background-color: #222;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+.stats-table th, 
+.stats-table td {
+    padding: 8px;
+    border: 1px solid #aaa;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace; /* Mimics monospaced typewriters */
+}
+
+/* Align first column (team/player names) to the left */
+.stats-table td:first-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+/* Alternate row colors */
+.stats-table tbody tr:nth-child(even) {
+    background-color: #f0f0eb;
+}
+
+.stats-table tbody tr:hover {
+    background-color: #e5e5e0;
+    transition: background-color 0.3s ease;
+}
+
+.league-standings-table th,td,tr{
+    text-align: left;
+}
+
+
+
+/* Container with Columns */
+/* .container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    margin: 0 auto;
+    padding: 20px;
+    
+} */
+ /* Container with Columns */
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;  /* Spread out columns */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Make Columns Consistent in Size */
+.column {
+    flex: 1;
+    min-width: 300px;  /* Minimum width for columns */
+    max-width: 33%;    /* Set a max width for three columns per row */
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;  /* Ensure padding is included in width calculation */
+}
+
+/* .hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+} */
+/* Hero Section */
+.hero {
+    width: 100%;           /* Ensure the hero section takes full width */
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px 20px;
+    max-height: fit-content;
+    /* background-color: #ffecec; */
+    background-image: url('/images/banners/t1.jpg');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    /* filter: blur(10px); Adjust blur strength */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* .column {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 10px;
+} */
+
+.column h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Call to Action (CTA) Styling */
+#CTA {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #222;
+    text-align: left;
+    padding: 20px 40px;
+    background-color: #f7f7f7;
+    border-left: 5px solid #333;
+    border-right: 5px solid #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 40px auto;
+    background-image: url('https://www.transparenttextures.com/patterns/old-wall-1.png');
+    background-size: cover;
+    border-radius: 8px;
+}
+
+#CTA h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#CTA p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+#CTA ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#CTA ul li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.8;
+}
+
+#CTA ul li::before {
+    content: "•";
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+}
+
+#CTA button.toggle-btn {
+    padding: 12px 30px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#CTA button.toggle-btn:hover {
+    background-color: #555;
+}
+
+#CTA button.toggle-btn:active {
+    background-color: #222;
+}
+
+button{
+    padding: 12px 30px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* General Dropdown Styling */
+select {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 2px solid #222;
+    background-color: #f5f5f1;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+}
+
+/* Adjust Dropdown Section to Reduce Space */
+#League, #seasonSelect {
+    display: inline-block;
+    margin: 5px 2px;
+    padding: 4px 6px;
+    font-size: 14px;
+}
+
+/* Dropdown Hover Effect */
+select:hover {
+    border-color: #555;
+    background-color: #eaeaea;
+}
+
+/* Dropdown Focus Effect */
+select:focus {
+    outline: none;
+    border-color: #111;
+    background-color: white;
+}
+
+/* Footer Styling */
+.footer {
+    background: #e0ded3;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    border-top: 3px solid black;
+    font-size: 0.9rem;
+}

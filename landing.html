@@ -4,256 +4,261 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flash Stats - Baseball Analytics</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            width: 100%;
-            height: 100%;
-     
-        
-            
-        }
-        header {
-            background-color: #7d0c0c;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        .container {
-            display: flex;
-            padding: 20px;
-            gap: 20px;
-            -ms-overflow-style: none;  /* Internet Explorer 10+ */
-            scrollbar-width: none;  /* Firefox */
-        }
-       
-        .container::-webkit-scrollbar { 
-            display: none;  /* Safari and Chrome */
-        }
-        .column {
-            flex: 1;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .column h2 {
-            color: #7d0c0c;
-        }
-        .column ul {
-            list-style: none;
-            padding: 0;
-        }
-        .column ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid #ddd;
-        }
-        .toggle-btn {
-            background-color: #ff4500;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .full-width-section {
-            width: 100%;
-            background-color: white;
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-
-
-        
-        .full-width-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;  /* Horizontally centers the content */
-            justify-content: center;  /* Vertically centers the content */
-
-            text-align: center;  /* Center text inside the section */
-         
-          }
-          
-          .full-width-section h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-          }
-          
-          .full-width-section p {
-            font-size: 1.25rem;
-            margin-bottom: 20px;
-          }
-          
-          .full-width-section button {
-            padding: 10px 20px;
-            background-color: #f59e0b;  /* Orange color */
-            border: none;
-            border-radius: 50px;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-          }
-          
-          .full-width-section button:hover {
-            background-color: #d97706;  /* Darker orange on hover */
-          }
-          
-
-
-
-        .footer {
-            text-align: center;
-            background-color: #7d0c0c;
-            color: white;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    
-        .hero {
-            background: url('hero-background.jpg') center/cover no-repeat;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            padding: 100px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin-bottom: 20px;
-        }
-        .hero button {
-            background-color: #ff4500;
-            color: rgb(255, 222, 222);
-            font-size: 1.2rem;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .hero button:hover {
-            background-color: #cc3700;
-        }
-    
-    </style>
+    <link rel="stylesheet" href="css/pages/landing.css">
 </head>
 <body>
+
     <header>
-        <h1>Flash Stats</h1>
-        <img src="images/logo.png" alt="Flash Stats Logo" style="height:50px;">
+        <h1 class="logo">Flash Stats</h1>
         <nav>
             <a href="#players">Players</a>
             <a href="#teams">Teams</a>
             <a href="#stats">Stats</a>
             <a href="#predictions">Predictions</a>
             <a href="#contact">Contact</a>
-            <button>Sign Up</button>
+            <a href="#signup">Sign Up</a>
         </nav>
     </header>
     
+
     <div class="hero">
+        <!-- <img src="image1.jpg" class="active"> -->
+        <!-- <img src="\images\banners\pano3.jpg" class="active">
+        <img src="\images\banners\pano3.jpg"> -->
         <h1>Next-Level Baseball Analytics & Predictions</h1>
-        <p>Unlock the power of data with insights from 400K+ players worldwide. Run by people that get it, built for fans and analysts who demand accuracy.</p>
-        <button onclick="window.location.href='#signup'">Get Your Edge Now</button>
+        <p>Unlock the power of data with insights from 400K+ players worldwide.</p>
+        <button id="edge" onclick="window.location.href='#signup'">Get Your Edge Now</button>
     </div>
     
-    
-<div class="container">
-    <!-- Player Highlights -->
-    <div class="column">
-        <h2>Top Players</h2>
-        <p>Stay updated on this season's top performers.</p>
-        <ul>
-            <li><strong> Ethan Calder</strong>: .75 ERA, 2 G</li>
-            <li><strong>Noah Chapman</strong>: 5.72 ERA, .241 BAVG, 9 WP</li>
-            <li><strong> Brad Pruett</strong>: 1.42 ERA, 3 G</li>
-        </ul>
-        <button class="toggle-btn">View More Stats</button>
+
+    <div class="container">
+        <!-- Player Highlights -->
+        <div class="column">
+            <h2>Top Players</h2>
+            <p>Stay updated on this season's top performers.</p>
+            <table class="stats-table">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>ERA</th>
+                        <th>G</th>
+                        <th>K</th>
+                        <th>BB</th>
+                        <th>BAVG</th>
+                        <th>WHIP</th>
+                        <th>IP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Ethan Calder</td><td>0.75</td><td>2</td><td>15</td><td>3</td><td>.190</td><td>1.05</td><td>12</td></tr>
+                    <tr><td>Noah Chapman</td><td>5.72</td><td>4</td><td>22</td><td>10</td><td>.241</td><td>1.45</td><td>16</td></tr>
+                    <tr><td>Brad Pruett</td><td>1.42</td><td>3</td><td>8</td><td>2</td><td>.205</td><td>0.98</td><td>14</td></tr>
+                    <tr><td>Jace LaViolette</td><td>0.75</td><td>2</td><td>12</td><td>4</td><td>.178</td><td>1.12</td><td>10</td></tr>
+                    <tr><td>Cam Cannarella</td><td>5.72</td><td>3</td><td>20</td><td>8</td><td>.241</td><td>1.38</td><td>14</td></tr>
+                    <tr><td>Ethan Petry</td><td>1.42</td><td>3</td><td>10</td><td>3</td><td>.215</td><td>1.05</td><td>12</td></tr>
+                    <tr><td>Jamie Arnold</td><td>0.75</td><td>2</td><td>14</td><td>5</td><td>.183</td><td>1.10</td><td>11</td></tr>
+                    <tr><td>Luke Stevenson</td><td>5.72</td><td>3</td><td>18</td><td>7</td><td>.241</td><td>1.40</td><td>13</td></tr>
+                    <tr><td>Wehiwa Aloy</td><td>1.42</td><td>3</td><td>9</td><td>2</td><td>.198</td><td>1.00</td><td>13</td></tr>
+                    <tr><td>Max Bristow</td><td>3.25</td><td>4</td><td>11</td><td>6</td><td>.220</td><td>1.20</td><td>17</td></tr>
+                    <tr><td>Jordan McKenzie</td><td>2.89</td><td>5</td><td>16</td><td>4</td><td>.195</td><td>1.08</td><td>15</td></tr>
+                    <tr><td>Tyler Riggins</td><td>4.12</td><td>3</td><td>9</td><td>5</td><td>.230</td><td>1.30</td><td>14</td></tr>
+                    <tr><td>Chris Delgado</td><td>1.95</td><td>2</td><td>13</td><td>2</td><td>.175</td><td>0.95</td><td>10</td></tr>
+                </tbody>
+            </table>
+            
+            
+            
+            <button class="toggle-btn">View More</button>
+        </div>
+
+        <!-- Interactive Standings -->
+        <div class="column">
+            <h2>League Standings</h2>
+            <select id="League">
+                <option>MLB</option>
+                <option>Minors</option>
+                <option>KBO</option>
+                <option>KBO Futures</option>
+            </select>
+            <select id="seasonSelect">
+                <option>2025</option>
+                <option>2024</option>
+                <option>2023</option>
+            </select>
+
+            <div class="league-standings" id="center-col">
+                <table class="league-standings-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>W</th>
+                            <th>L</th>
+                            <th>Pct</th>
+                            <th>GB</th>
+                            <th>STR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Doosan Bears Futures</td>
+                            <td>40</td>
+                            <td>10</td>
+                            <td>.800</td>
+                            <td>--</td>
+                            <td>W6</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Samsung Lions Futures</td>
+                            <td>38</td>
+                            <td>12</td>
+                            <td>.760</td>
+                            <td>2.0</td>
+                            <td>W3</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>SSG Landers Futures</td>
+                            <td>35</td>
+                            <td>15</td>
+                            <td>.700</td>
+                            <td>5.0</td>
+                            <td>L1</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>KIA Tigers Futures</td>
+                            <td>32</td>
+                            <td>18</td>
+                            <td>.640</td>
+                            <td>8.0</td>
+                            <td>W2</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>LG Twins Futures</td>
+                            <td>30</td>
+                            <td>20</td>
+                            <td>.600</td>
+                            <td>10.0</td>
+                            <td>L2</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Goyang Heroes</td>
+                            <td>28</td>
+                            <td>22</td>
+                            <td>.560</td>
+                            <td>12.0</td>
+                            <td>W1</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Hanwha Eagles Futures</td>
+                            <td>25</td>
+                            <td>25</td>
+                            <td>.500</td>
+                            <td>15.0</td>
+                            <td>W4</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>KT Wiz Futures</td>
+                            <td>22</td>
+                            <td>28</td>
+                            <td>.440</td>
+                            <td>18.0</td>
+                            <td>L3</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Lotte Giants Futures</td>
+                            <td>20</td>
+                            <td>30</td>
+                            <td>.400</td>
+                            <td>20.0</td>
+                            <td>W2</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>NC Dinos Futures</td>
+                            <td>18</td>
+                            <td>32</td>
+                            <td>.360</td>
+                            <td>22.0</td>
+                            <td>L4</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Police Baseball Team</td>
+                            <td>15</td>
+                            <td>35</td>
+                            <td>.300</td>
+                            <td>25.0</td>
+                            <td>L5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+            
+        </div>
+
+        <!-- Premium Analytics CTA -->
+        <div class="column" id="CTA">
+            <h2>Unlock Advanced Stats</h2>
+            <p>Access AI-driven insights & exclusive data to stay ahead of the game.</p>
+            <ul>
+                <li><span class="icon">&#x1F4C8;</span> Predictive performance models</li>
+                <li><span class="icon">&#x1F4C9;</span> Historical trend analysis</li>
+                <li><span class="icon">&#x1F4CB;</span> Custom player comparisons</li>
+            </ul>
+            <button class="toggle-btn" onclick="window.location.href='#signup'">Start Your Free Trial</button>
+        </div>
+        
+    </div>  <!--  end of container 1 -->
+   
+    <div class="container">
+        <div class="column">
+            <h2>MLB Scores, Standings, News & Analytics</h2>
+            <p>Stay updated with the latest MLB scores, team standings, breaking news, and in-depth analytics.</p>
+        </div>
+
+        <div class="column">
+            <h2>Join Fantasy Baseball</h2>
+            <p>Sign up to participate in our fantasy baseball league and test your skills against others.</p>
+            <button>Sign Up Now</button>
+        </div>
+
+        <div class="column">
+            <h2>News Around the League</h2>
+            <div class="news-article">
+                <img src="images/news1.jpg" alt="Baseball news" class="news-image">
+                <div class="news-content">
+                    <h3><a href="#">This Week's Top Stories</a></h3>
+                    <p>Catch up on the biggest headlines, player trades, and playoff predictions.</p>
+                </div>
+            </div>
+
+            <div class="news-article">
+                <img src="images/news2.jpg" alt="Pirates Future" class="news-image">
+                <div class="news-content">
+                    <h3><a href="#">Future for the Pirates?</a></h3>
+                    <p>Can Pittsburgh turn their season around? Expert insights and analysis.</p>
+                </div>
+            </div>
+
+            <button class="news-btn">More News</button>
+        </div>
     </div>
 
-    <!-- Interactive Standings -->
-    <div class="column">
-        <h2>League Standings</h2>
-        <p>Choose a league, choose a year.</p>
-        <select id="League">
-            <option>MLB </option>
-            <option>Minors</option>
-            <option>KBO</option>
-            <option>KBO Futures</option>
-        </select>
-        <select id="seasonSelect">
-            <option>2025</option>
-            <option>2024</option>
-            <option>2023</option>
-        </select>
-
-        <ul id="standingsList">
-            <h2>KBO Futures </h2>
-            <li><strong>KT Wiz</strong>: 65-40 (.620)</li>
-            <li><strong>Hanwha Eagles</strong>: 60-45 (.611)</li>
-            <li><strong>Sangmu Phoenix</strong>: 58-48 (.601)</li>
-
-            <li><strong>KIA Tigers</strong>: 65-40 (.583)</li>
-            <li><strong>Samsung Lions</strong>: 60-45 (.571)</li>
-            <li><strong>Lotte Giants</strong>: 58-48 (.547)</li>
-
-            <li><strong>Goyang Heroes</strong>: 65-40 (.502)</li>
-            <li><strong>NC Dinos </strong>: 60-45 (.480)</li>
-            <li><strong>SSG Landers</strong>: 58-48 (.472)</li>
-
-            <li><strong>Doosan Bears</strong>: 65-40 (.401)</li>
-            <li><strong>LG Twins</strong>: 60-45 (.322)</li>
-           
-        </ul>
-    </div>
-
-    <!-- Premium Analytics CTA -->
-    <div class="column">
-        <h2>Unlock Advanced Stats</h2>
-        <p>Access AI-driven insights & exclusive data to stay ahead of the game.</p>
-        <ul>
-            <li>Predictive performance models</li>
-            <li>Historical trend analysis</li>
-            <li>Custom player comparisons</li>
-        </ul>
-        <button class="toggle-btn" onclick="window.location.href='#signup'">Start Your Free Trial</button>
-    </div>
-</div>
-    
-    <div class="full-width-section">
-        <h2>MLB Scores, Standings, News & Analytics</h2>
-        <p>Stay updated with the latest MLB scores, team standings, breaking news, and in-depth analytics.</p>
-    </div>
-    
-    <div class="full-width-section">
-        <h2>Join Fantasy Baseball</h2>
-        <p>Sign up to participate in our fantasy baseball league and test your skills against others.</p>
-        <button>Sign Up Now</button>
-    </div>
-    
     <footer class="footer">
         <p>&copy; 2025 Flash Stats. All rights reserved.</p>
     </footer>
+<script src="landing.js"></script>
+
 </body>
 </html>
