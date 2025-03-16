@@ -45,6 +45,18 @@ const Landing = () => {
             <tbody>
               {/* List player data dynamically if possible */}
               <tr><td>Ethan Calder</td><td>0.75</td><td>2</td><td>15</td><td>3</td><td>.190</td><td>1.05</td><td>12</td></tr>
+              <tr><td>Noah Chapman</td><td>5.72</td><td>4</td><td>22</td><td>10</td><td>.241</td><td>1.45</td><td>16</td></tr>
+              <tr><td>Brad Pruett</td><td>1.42</td><td>3</td><td>8</td><td>2</td><td>.205</td><td>0.98</td><td>14</td></tr>
+              <tr><td>Jace LaViolette</td><td>0.75</td><td>2</td><td>12</td><td>4</td><td>.178</td><td>1.12</td><td>10</td></tr>
+              <tr><td>Cam Cannarella</td><td>5.72</td><td>3</td><td>20</td><td>8</td><td>.241</td><td>1.38</td><td>14</td></tr>
+              <tr><td>Ethan Petry</td><td>1.42</td><td>3</td><td>10</td><td>3</td><td>.215</td><td>1.05</td><td>12</td></tr>
+              <tr><td>Jamie Arnold</td><td>0.75</td><td>2</td><td>14</td><td>5</td><td>.183</td><td>1.10</td><td>11</td></tr>
+              <tr><td>Luke Stevenson</td><td>5.72</td><td>3</td><td>18</td><td>7</td><td>.241</td><td>1.40</td><td>13</td></tr>
+              <tr><td>Wehiwa Aloy</td><td>1.42</td><td>3</td><td>9</td><td>2</td><td>.198</td><td>1.00</td><td>13</td></tr>
+              <tr><td>Max Bristow</td><td>3.25</td><td>4</td><td>11</td><td>6</td><td>.220</td><td>1.20</td><td>17</td></tr>
+              <tr><td>Jordan McKenzie</td><td>2.89</td><td>5</td><td>16</td><td>4</td><td>.195</td><td>1.08</td><td>15</td></tr>
+              <tr><td>Tyler Riggins</td><td>4.12</td><td>3</td><td>9</td><td>5</td><td>.230</td><td>1.30</td><td>14</td></tr>
+              <tr><td>Chris Delgado</td><td>1.95</td><td>2</td><td>13</td><td>2</td><td>.175</td><td>0.95</td><td>10</td></tr>
               {/* Repeat similar rows as needed */}
             </tbody>
           </table>
@@ -89,6 +101,96 @@ const Landing = () => {
                   <td>.800</td>
                   <td>--</td>
                   <td>W6</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Samsung Lions Futures</td>
+                  <td>38</td>
+                  <td>12</td>
+                  <td>.760</td>
+                  <td>2.0</td>
+                  <td>W3</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>SSG Landers Futures</td>
+                    <td>35</td>
+                    <td>15</td>
+                    <td>.700</td>
+                    <td>5.0</td>
+                    <td>L1</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>KIA Tigers Futures</td>
+                    <td>32</td>
+                    <td>18</td>
+                    <td>.640</td>
+                    <td>8.0</td>
+                    <td>W2</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>LG Twins Futures</td>
+                    <td>30</td>
+                    <td>20</td>
+                    <td>.600</td>
+                    <td>10.0</td>
+                    <td>L2</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Goyang Heroes</td>
+                    <td>28</td>
+                    <td>22</td>
+                    <td>.560</td>
+                    <td>12.0</td>
+                    <td>W1</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Hanwha Eagles Futures</td>
+                    <td>25</td>
+                    <td>25</td>
+                    <td>.500</td>
+                    <td>15.0</td>
+                    <td>W4</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>KT Wiz Futures</td>
+                    <td>22</td>
+                    <td>28</td>
+                    <td>.440</td>
+                    <td>18.0</td>
+                    <td>L3</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Lotte Giants Futures</td>
+                    <td>20</td>
+                    <td>30</td>
+                    <td>.400</td>
+                    <td>20.0</td>
+                    <td>W2</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>NC Dinos Futures</td>
+                    <td>18</td>
+                    <td>32</td>
+                    <td>.360</td>
+                    <td>22.0</td>
+                    <td>L4</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Police Baseball Team</td>
+                    <td>15</td>
+                    <td>35</td>
+                    <td>.300</td>
+                    <td>25.0</td>
+                    <td>L5</td>
                 </tr>
                 {/* Repeat similar rows as needed */}
               </tbody>
