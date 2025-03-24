@@ -5,8 +5,8 @@ const Header = () => {
     <header className="cutom_nav" id="navbar">
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg menu_nav">
-          <a className="navbar-brand" href="index.html">
-            <img src="./images/oliver/Flash Stats- Oliver-03.jpg" alt="" className="img-responsive" />
+          <a className="navbar-brand" >
+            <img src="../assets/images/oliver/oliverPondering.jpg" />
           </a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav" aria-controls="mynav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

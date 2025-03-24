@@ -14,7 +14,7 @@ function App() {
       <Routes>
 
         <Route index element={<HomePage />} />
-        <Route element={<HomePage />} />
+        <Route path="/landing" element={<Landing />} />
                 
 
 

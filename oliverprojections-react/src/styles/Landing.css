@@ -77,7 +77,7 @@ header {
     text-align: center;
     margin: 0 auto;
     display: block;
-    max-width: 80%;
+    /* max-width: 80%; */
     border-bottom: 2px solid black;
     padding-bottom: 5px;
     letter-spacing: 1px;
@@ -127,8 +127,43 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.league-standings-table th,td,tr{
-    text-align: left;
+
+
+.league-standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.league-standings-table thead {
+    background-color: #333;
+    color: white;
+}
+
+.league-standings-table th, 
+.league-standings-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.league-standings-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.league-standings-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.league-standings-table th:first-child, 
+.league-standings-table td:first-child {
+    text-align: center;
+    font-weight: bold;
+}
+
+.league-standings-table th {
+    font-size: 20px;
 }
 
 
@@ -149,20 +184,24 @@ header {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    justify-content: space-between;  /* Spread out columns */
+    justify-content: space-between; 
     margin: 0 auto;
     padding: 20px;
 }
 
+
+
 /* Make Columns Consistent in Size */
 .column {
     flex: 1;
-    min-width: 300px;  /* Minimum width for columns */
-    max-width: 33%;    /* Set a max width for three columns per row */
+    /* min-width: 300px;  Minimum width for columns */
+    max-width: 40%;   
     text-align: center;
     padding: 10px;
     box-sizing: border-box;  /* Ensure padding is included in width calculation */
 }
+
+
 
 /* .hero {
     text-align: center;
@@ -325,6 +364,10 @@ select {
     margin: 5px 2px;
     padding: 4px 6px;
     font-size: 14px;
+}
+
+#movedDown{
+    margin-bottom:9%;
 }
 
 /* Dropdown Hover Effect */
