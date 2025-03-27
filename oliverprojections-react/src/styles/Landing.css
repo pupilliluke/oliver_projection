@@ -392,3 +392,7 @@ select:focus {
     border-top: 3px solid black;
     font-size: 0.9rem;
 }
+
+#test{
+    padding:1%;
+}

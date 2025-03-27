@@ -10,6 +10,16 @@ import FantasyBaseball from './../components/FantasyBaseball';
 import NewsAroundLeague from './../components/NewsAroundLeague'; 
 
 
+// combine ball hit towards 3 different slices of field, what quality of the ball hit, color coded
+//need kanban for oliver projections
+//player cards - text jake about features
+//recruiting optimizer - data points for optimal times to watch players based on location,performance,schedule, opponent, pitcher success
+//how much a player walks, strikes out, steals bases, etc
+//player focus - colleges- recruiting (playing stats, prep scouting metrics)  || advanced scouting (giving coach report on opponents, batter/pitcher matchup, how fast, how hard they throw, etc)
+
+
+
+
 const Landing = () => {
   return (
     <>
@@ -45,14 +55,22 @@ const Landing = () => {
       </div>
 
       <div className="container">
-        {/* Player Highlights */}
         <MLBScores /> 
 
-        {/* Interactive Standings */}
         <FantasyBaseball />
 
-        {/* Premium Analytics CTA */}
         <NewsAroundLeague />
+      </div>
+
+      <div id="test">
+      <h1> Exit Velocity vs Sweet Spot</h1>
+      <iframe
+        src="../graph.html"
+        width="100%"
+        height="600px"
+        style={{ border: "none" }}
+        title="Graph"
+      ></iframe>
       </div>
 
 
